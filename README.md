@@ -22,7 +22,6 @@ Contributos iniciais:
 
 Descrição
 ---------
-
 Aplicação da Norma técnica sobre o Modelo de Dados e Sistematização da Informação Gráfica dos Planos Diretores Municipais – Documento de trabalho datado de 23 maio 2019 - no QGIS.
 
 Objetivos
@@ -39,15 +38,65 @@ Facilitar o trabalho das Câmara Municipais e dos Gabinetes/Equipas Técnicas na
 - Facilitar o acesso por parte de utilizadores menos experientes.
 
 Este objetivos deste projeto são ambiciosos e no âmbito da Oficina de Dados Abertos, 3 e 4 de outubro, 2019, Águeda o trabalho incidiu no primeiro objetivo, a Construção, em QGIS, da simbologia oficial da Norma Técnica.
+
 Ao explorar a norma deparamo-nos com o facto de faltar simbologia para a Carta da REN e para as Faixas de salvaguarda (…) dos POC (no caso da Região Centro, POC-OMG).
+
 Assim, tendo em conta o Artigo 4.º do Decreto-Lei n.º 124/2019, de 28 de agosto, que altera o regime jurídico da Reserva Ecológica Nacional (REN), realizámos a construção de uma proposta de simbologia para as tipologias de Áreas integradas em REN. Uma vez que essas áreas estão divididas em três grupos:
+
 - Áreas de Proteção do Litoral (APL)
 - Áreas relevantes para a sustentabilidade do Ciclo Hidrológico terrestre (ACH)
 - Áreas de Prevenção de Riscos naturais (APR)
+
 Optámos ao criar as diferentes simbologias utilizar uma cor dominante para cada um dos grupos. Assim as Áreas de Proteção do Litoral (APL) ficaram com a cor amarelo-torrada (que faz lembrar as praias), as Áreas da sustentabilidade do Ciclo Hidrológico terrestre (ACH) com a cor azul (que faz lembrar a água) e as Áreas de Prevenção de Riscos naturais (APR) com a cor vermelha (que associamos a perigo).
+
 Foram criadas 30 simbologias para a REN:
+
 Áreas relevantes para a sustentabilidade do ciclo hidrológico - ACH (10 simbologias)
 
+- ACH Albufeiras (leitos)
+- ACH Albufeiras (margens)
+- ACH Albufeiras (faixas de proteção)
+- ACH Cursos de água (leitos)
+- ACH Cursos de água (leitos) (Linha)
+- ACH Cursos de água (margens)
+- ACH Lagoas e lagos (faixas de proteção)
+- ACH Lagoas e lagos (leitos)
+- ACH Lagoas e lagos (margens)
+- ACH Áreas estratégicas de infiltração e de proteção e recarga de aquíferos
+
+Áreas de proteção do litoral – APL (14 simbologias)
+
+- APL Arribas e respetivas faixas de proteção
+- APL Barreiras detríticas
+- APL Dunas costeiras (interiores)
+- APL Dunas costeiras (litorais)
+- APL Dunas fósseis
+- APL Faixa marítima de proteção costeira
+- APL Faixa terrestre de proteção costeira
+- APL Ilhéus e rochedos emersos no mar
+- APL Praias
+- APL Sapais
+- APL Tômbolos
+- APL Águas de transição (faixas de proteção)
+- APL Águas de transição (leitos)
+- APL Águas de transição (margens)
+
+Áreas de prevenção de riscos naturais – APR (6 simbologias)
+
+- APR Zonas adjacentes
+- APR Zonas ameaçadas pelas cheias
+- APR Zonas ameaçadas pelo mar
+- APR Áreas de elevado risco de erosão hídrica do solo
+- APR Áreas de instabilidade de vertentes (AIV)
+- APR Áreas de instabilidade de vertentes (Escarpas)
+
+
+Documentos de apoio
+-------------------
+Norma técnica sobre o modelo de dados e sistematização da informação gráfica dos planos diretores municipais
+Anexo I - Catálogo de objetos do plano, com a organização dos objetos na planta de ordenamento (Anexo I-A) e na planta de condicionantes (Anexo I-B);
+Anexo II - Estrutura da base de dados geográfica das plantas que constituem o PDM;
+Anexo III - Catálogo de simbologia, com as características gráficas dos objetos, a utilizar na elaboração das plantas.
 
 
 Tecnologias
@@ -65,27 +114,9 @@ Pretende-se utilizar um Sistema de Gestão de Base de Dados (SGBD) geo-relaciona
 - Implementa o modelo Simple Features do OGC;
 - Permite guardar simbologia SLD e QGS diretamente na base de dados.
 
-#### Spatialite ([https://www.gaia-gis.it/fossil/libspatialite/home](https://www.gaia-gis.it/fossil/libspatialite/home))
-- Baseado em SQLite;
-- Um único ficheiro;
-- Uma espécie de PostGIS para tótós, implementando a maioria das funções espaciais, mas mais fácil de instalar:
-- Suportado também em Android;
-- Permite guardar simbologia SLD e QGS directamente na base de dados (XmlBlob).
-
-#### GeoPackage ([http://www.geopackage.org/](http://www.geopackage.org/))
-- Standard OGC para intercâmbio de dados;
-- Pretende substituir (finalmente) o Shapefile;
-- Baseado em SQLite, tal como o Spatialite, mas é mais simples de criar;
-- Standard recente, mas que já é suportado pela OGR, ESRI, GeoTools.
-
 ### Simbologia
-Ambas as opções em análise são suportadas pelo QGIS.
 
-#### QGS - QGIS Layer Style format
-- Formato nativo do QGIS;
-- Muitas opções de representação gráfica.
-
-#### SLD - OGC Styled Layer Descriptor
+#### Formato XML
 - Standard OGC para representação gráfica de elementos;
 - Utilizado em muitos software SIG, proeminentemente no GeoServer.
 

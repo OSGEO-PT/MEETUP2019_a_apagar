@@ -1,6 +1,25 @@
 NormaPDM2QGIS 2019
 =============
 
+Oficina de Dados Abertos, 3 e 4 de outubro 2019, Águeda
+
+Contributos iniciais:
+
+•	Carlos Lima (Município de Águeda)
+
+•	Catarina Pinheiro (Município de Vale de Cambra)
+
+•	Manuel Venâncio Jesus (Município de Águeda)
+
+•	Rute Santos (Município de Vale de Cambra)
+
+•	Sandra Lopes (Município de Mealhada)
+
+•	Sandra Santos (CCDRC)
+
+•	Zulmira Duarte (CCDRC)
+
+
 Descrição
 ---------
 
